@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+	
+	<title>Окна компани</title>
+	
+	<link rel="stylesheet" href="res/stylesheet.css" />
+	<link rel="stylesheet" href="res/byform.css" />
+	<script src="res/script.js"></script>
+	<script src="res/byform.js"></script>
+	
+</head>
+<body>
+
+<div id="menutoggle">
+	<div>&#9776;</div>
+	Заказать окно
+</div>
+<nav>
+	<a href="index.xhtml">Главная</a>
+	<a href="">Новости</a>
+	<a href="">О нас</a>
+	<a href="">СМИ о нас</a>
+	<a href="">Контакты</a>
+</nav>
+
+<div id="form">
+	<h1>Форма заказа</h1>
+	<div id="form1" class="active">
+		<label for="adsad">Выберите типо окон:<br/>
+			<input type="radio" id="stv1" name="stvor" value="1" /><label for="stv1" >Одностворчатые</label><br />
+			<input type="radio" id="stv2" name="stvor" value="2" checked="checked" /><label for="stv2" >Двухстворчатые</label><br />
+			<input type="radio" id="stv3" name="stvor" value="3" /><label for="stv3" >Трехстворчатые</label><br />
+			<div></div>
+			<label><input type="checkbox" name="meh_stvor[1]" value="1"/>На первой створке</label>
+			<label><input type="checkbox" name="meh_stvor[2]" value="2" />На второй створке</label>
+			<label><input type="checkbox" name="meh_stvor[3]" value="3" />На третьей створке</label>
+		</label>
+	</div>
+	<div id="form2">
+		<h3>Ваши персональные данные:</h3>
+		<input name="fname" placeholder="Имя"/>
+		<input name="mname" placeholder="Отчество" />
+		<input name="lname" placeholder="Фамилия" />
+		<input name="phone" placeholder="Номер телефона" />
+		<h3>Адрес доставки</h3>
+		<input name="city" placeholder="Ваш город" />
+		<input name="street" placeholder="Название улицы" />
+		<input name="house" placeholder="Номер дома" />
+		<input name="floor" placeholder="Номер квартиры" />
+	</div>
+	<div id="form3">
+		<h3>Проверьте ваши данные:</h3>
+	</div>
+	<button>Продолжить</button>
+</div>
+
+<footer>
+	<img src="res/ikonki.png" alt="Кнопки соц-сетей" />
+</footer>
+</body>
+</html>

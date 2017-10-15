@@ -1,0 +1,403 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+}
+html
+{
+	font-size: calc((100vw - 480px)/(1280 - 480)*(18 - 14) + 14px);
+	font-family: 'PT Sans', Helvetica, HelveticaNeue, Tahoma, Sans-Serif, Arial;
+}
+body
+{
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+@media(min-width: 1281px)
+{
+	html
+	{
+		/* TO DO: background-image of Page; */
+	}
+	body
+	{
+		overflow-x: hidden;
+	}
+}
+
+header
+{
+	padding: 10px 0;
+	padding-bottom: 40px;
+	height: 150px;
+	border-radius: 0% 0% 5px 5px;
+	/*background-image: linear-gradient(to bottom, HSL(200, 80%, 65%) 0%, HSL(200, 70%, 75%) 70%, HSL(200, 80%, 70%) 80%, HSL(200, 80%, 65%) 100%);*/
+	/*box-shadow: 0 6px 8px -4px black;*/
+	background: transparent linear-gradient(to top,
+		transparent 0%,
+		HSLA(200,70%,75%,.7) 35px,
+		HSL(200,70%,75%) 100%);
+	font-size: 0;
+}
+@media(min-width: 1281px)
+{
+	header
+	{
+		box-sizing: border-box;
+		margin-left: calc(640px - 50vw);
+		padding: 10px calc(50vw - 640px) 40px;
+		width: 100vw;
+	}
+}
+header > *
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+header > h1
+{
+	padding-left: 20px;
+	width: calc(100% - 240px);
+	font-size: 1.75rem;
+}
+header > img
+{
+	padding-right: 20px;
+	width: 200px;
+	height: 150px;
+}
+
+
+nav
+{
+	display: flex;
+	box-sizing: border-box;
+	padding: 10px 15px;
+	width: 100%;
+}
+
+nav > a
+{
+	position: relative;
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
+	justify-content: center;
+	margin: 5px;
+	height: 50px;
+	background-color: hsla(200,70%,75%,1);
+	color: black;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav > a::before,
+nav > a::after
+{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 65%;
+	height: 2px;
+	background-color: hsla(210,40%,55%,1);
+	content: ' ';
+	opacity: 0;
+	transition: .3s all ease-out;
+	transform: none;
+}
+nav > a::before
+{
+	top: 3px;
+	bottom: auto;
+}
+nav > a::after
+{
+	top: auto;
+	bottom: 3px;
+}
+
+nav > a:hover::before,
+nav > a:hover::after
+{
+	opacity: 1;
+	transition: .25s all ease-in;
+}
+nav > a:hover::before
+{
+	transform: translateY(7px);
+}
+nav > a:hover::after
+{
+	transform: translateY(-7px);
+}
+
+body > section,
+body > article
+{
+	margin: 20px;
+}
+
+section
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section > h2,
+article > h2
+{
+	display: flex;
+	flex-basis: 100%;
+	background-image: linear-gradient(to bottom, transparent 1.5rem, hsla(200,70%,75%,1) 1.5rem, hsla(200,70%,75%,1) 1.55rem, transparent 1.54rem);
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+}
+
+section > article
+{
+	position: relative;
+	display: flex;
+	flex-basis: calc(50% - 40px);
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+	max-width: calc(50% - 40px);
+	box-shadow: 0px 0px 3px -1px black;
+}
+section > article:hover
+{
+	box-shadow: 0px 0px 3px 0 black;
+}
+
+section > article > h3
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 15px;
+	background: transparent linear-gradient(to bottom,
+		RGBA(255,255,255,.7) 0%,
+		RGBA(255,255,255,.8) 15%,
+		RGB(255,255,255) 100%);
+	text-align: center;
+}
+section > article > img
+{
+	width: 70%;
+}
+
+body > article
+{
+	font-size: 0;
+}
+body > article > img,
+body > article > p
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+body > article > img
+{
+	width: 50%;
+}
+
+body > article > p
+{
+	width: 50%;
+	text-indent: 1.25rem;
+	font-size: 1rem;
+}
+
+
+
+
+footer
+{
+	display: flex;
+	align-items: flex-start;
+	padding: 40px 0;
+	background: transparent linear-gradient(to bottom,
+		transparent 0%,
+		HSLA(200,70%,75%,.7) 35px,
+		HSL(200,70%,75%) 100%);
+}
+
+@media(min-width: 1281px)
+{
+	footer
+	{
+		box-sizing: border-box;
+		margin-left: calc(640px - 50vw);
+		padding: 40px calc(50vw - 640px);
+		width: 100vw;
+	}
+}
+
+@media (max-width: 1280px) and (min-width: 551px)
+{
+	footer
+	{
+		padding: 40px 10px;
+	}
+}
+
+footer > section
+{
+	flex-basis: 50%;
+	align-items: flex-start;
+}
+footer > section:nth-child(2)
+{
+	display: block;
+}
+
+footer > section > h3
+{
+	display: flex;
+	flex-basis: 70%;
+	margin-top: 10px;
+	background-image: linear-gradient(to bottom, transparent 1.1rem, hsla(200,70%,60%,1) 1.1rem, hsla(200,70%,60%,1) 1.15rem, transparent 1.15rem);
+	font-size: 1.15rem;
+	line-height: 1.2rem;
+}
+footer > section > p
+{
+	flex-basis: 70%;
+	font-size: 1rem;
+}
+footer > section:nth-child(2) > p
+{
+	text-indent: 1.25rem;
+}
+footer > section > img
+{
+	flex-basis: calc(30% - 20px);
+	float: left;
+	margin: 10px;
+	max-width: calc(30% - 20px);
+}
+
+@media(max-width: 550px)
+{
+	/* Новый адаптивный font-size */
+	html
+	{
+		font-size: calc((100vw - 240px)/(480 - 240)*(18 - 12) + 12px);
+	}
+	/* Прячем логотип вниз */
+	header
+	{
+		padding: 10px 15%;
+		height: auto;
+	}
+	header > img
+	{
+		width: 100%;
+		height: auto;
+	}
+	header > h1
+	{
+		/*width: auto;
+		text-align: center;
+		line-height: 1.2;*/
+		display: none;
+	}
+	/* Прячем меню.. */
+	nav
+	{
+		padding: 0;
+	}
+	nav > a
+	{
+		display: none;
+	}
+	/* Делаем товары в один ряд.. */
+	body > section
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+	section > h2,
+	article > h2
+	{
+		flex-basis: 100%;
+		margin: 5px 0;
+		min-width: 100%;
+		background-image: linear-gradient(to bottom, transparent 1.5rem, hsla(200,70%,75%,1) 1.5rem, hsla(200,70%,75%,1) 1.56rem, transparent 1.55rem);
+	}
+	section > h2
+	{
+		justify-content: center;
+	}
+	section > article
+	{
+		flex-basis: 80%;
+		min-width: 70%;
+		max-width: 70%;
+	}
+	/* Современная технология */
+	body > article > img
+	{
+		display: none;
+	}
+	body > article > p
+	{
+		width: 100%;
+	}
+	/* Теперь убираем блок с нашим руководителем.. */
+	footer
+	{
+		padding: 20px 15px 10px;
+	}
+	footer > section
+	{
+		flex-basis: 100%;
+	}
+	footer > section:nth-child(2)
+	{
+		display: none;
+	}
+	footer > section > h3
+	{
+		flex-basis: 90%;
+		background-image: linear-gradient(to bottom,
+			transparent 1.05rem, hsla(200,70%,60%,1) 1.1rem,
+			hsla(200,70%,60%,1) 1.2rem, transparent 1.2rem);
+		font-size: 1.2rem;
+	}
+	footer > section > p
+	{
+		margin: .5em 0;
+	}
+}
+
+
+/* Теперь настраиваем кнопочку меню, хотя бы без интерактива.. */
+@media(min-width: 551px)
+{
+	nav > a:nth-child(1)
+	{
+		display: none;
+	}
+}
+@media(max-width: 550px)
+{
+	nav > a:nth-child(1)
+	{
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		z-index: 10;
+		display: flex;
+		padding: 10px;
+		height: auto;
+		border: 1px solid hsla(200,70%,75%,1);
+		border-radius: 3px;
+		background-color: white;
+	}
+}
